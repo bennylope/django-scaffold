@@ -233,7 +233,12 @@ class BaseSection(Treebeard_Base_Class):
             return cmp(getattr(x[0],sort_key),getattr(y[0],sort_key))
 
         if sort_key:
-            associated_content.sort(cmp=sort_list)
+            try:
+                # FIXME:
+                # TypeError: comparison function must return int
+                associated_content.sort(cmp=sort_list)
+            except TypeError:
+                pass
         return associated_content
 
 class SectionItem(models.Model):
