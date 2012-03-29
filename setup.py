@@ -38,5 +38,5 @@ setup(
     ),
     classifiers=classifiers,
     long_description=long_desc,
-    install_requires=['django>=1.2','django-treebeard>=1.61']
+    #install_requires=['django>=1.2','django-treebeard>=1.61']
 )
